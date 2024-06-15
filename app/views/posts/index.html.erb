@@ -1,0 +1,20 @@
+<div class="p-posts">
+  <h1 class="p-posts__title">びびらせ王選手権</h1>
+  <p class="p-posts__info">このアプリは、投稿された内容のびびったポイントを競います。投稿はびびったポイント総数順に並びます。投稿は削除できません。</p>
+  <ul class="p-posts__list">
+    <% @posts.each do |post| %>
+    <li class="p-posts__item">
+      <%= link_to post_path(post.id) do %>
+        <p class="p-posts__item-body">
+          <%= post.body %>
+        </p>
+        <p class="p-posts__item-name">
+          <%= post.user_name %>
+        </p>
+        <% end %>
+    </li>
+  <% end %>
+  </ul>
+
+  <%= paginate @posts %>
+</div>

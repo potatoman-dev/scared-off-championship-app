@@ -1,0 +1,13 @@
+<div class="p-new">
+  <%= form_with model: @post do |f| %>
+    <div class="p-new__item">
+      <%= f.label :user_name, "ニックネーム", class: "p-new__item-label" %>
+      <%= f.text_field :user_name, class: "p-new__item-input" %>
+    </div>
+    <div class="p-new__item">
+      <%= f.label :body, "投稿内容", class: "p-new__item-label" %>
+      <%= f.text_area :body, class: "p-new__item-input" %>
+    </div>
+    <%= f.submit class: "p-new__submit-btn" %>
+  <% end %>
+</div>

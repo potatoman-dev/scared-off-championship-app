@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ :root {
+  --c-black: #110f0f;
+  --c-blue-dark: #0F4C75;
+  --c-blue-light: #BBE1FA;
+  --c-blue: #3282B8;
+  --c-red: #951717;
+  --f-noto: "Noto Serif JP", serif;
+ }
+
+ body {
+  background: var(--c-blue-light);
+ }
+
+ .l-header {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.l-header__top {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--c-blue-dark);
+}
+
+.l-header__post-btn {
+  font-size: 16px;
+  padding: 6px 15px;
+  border-radius: 5px;
+  background-color: var(--c-blue);
+  color: white;
+  box-shadow: 3px 5px 0 rgba(0, 0, 0, .02);
+}
+
+.p-posts {
+  padding: 0 20px;
+}
+
+.p-posts__title {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--c-blue-dark);
+  font-family: var(--f-noto);
+}
+
+.p-posts__info {
+  margin: 20px 10px 30px;
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.p-posts__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p-posts__item a {
+  padding: 20px 24px;
+  border-radius: 8px;
+  background: white;
+  display: block;
+  color: var(--c-black);
+  font-family: var(--f-noto);
+}
+
+.p-posts__item-name {
+  font-size: 12px;
+  margin-bottom: 0;
+  text-align: right;
+  color: #777777;
+}
+
+.p-posts__item-body {
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/*ページネーション自体のデザイン*/
+.pagination>li>a {          
+  border: none;
+  color: var(--c-blue);
+  background: transparent;
+}
+
+.pagination>.active>a {     
+  background: #fff;
+  color: var(--c-blue);
+  border-radius: 15px !important;
+}
+
+.pagination>li>a:hover {        
+  border-radius: 15px;
+}
+
+.pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
+  background: transparent;
+}
