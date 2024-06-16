@@ -69,6 +69,7 @@ a:hover {
 .l-header__post-btn:focus,
 .l-header__post-btn:hover {
   color: white;
+  opacity: 0.8;
 }
 
 .p-home,
@@ -146,6 +147,10 @@ a:hover {
   font-weight: bold;
   background-color: #dcdcdc;
   color: #2f4f4f;
+}
+
+.p-home__more-btn:hover {
+  opacity: 0.8;
 }
 
 .c-posts__list {
@@ -266,6 +271,10 @@ a:hover {
   margin-top: 50px;
 }
 
+.p-new__submit-btn:hover {
+  opacity: 0.8;
+}
+
 .p-new__submit-btn-input {
   background: #8b0000;
   border: none;
@@ -329,6 +338,8 @@ a:hover {
 .p-show__btn {
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   
   button {
@@ -346,6 +357,17 @@ a:hover {
     outline: none;
     box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.05);
     background: #fff;
+    transition: all ease .2s;
+  }
+
+  button:hover {
+    background: #8b0000;
+    color: #fff;
+  }
+
+  p {
+    margin-top: 10px;
+    color: #596868;
   }
 }
 
@@ -359,7 +381,15 @@ a:hover {
   padding: 10px 30px;
   font-size: 15px;
   font-weight: bold;
-  color: #596868;
+  background: #596868;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.p-show__more-btn:hover,
+.p-show__more-btn:focus {
+  color: #fff;
+  opacity: 0.8;
 }
 
 .l-footer {
