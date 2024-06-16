@@ -169,15 +169,21 @@
 }
 
 /*ページネーション自体のデザイン*/
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
 .pagination>li>a {          
   border: none;
-  color: var(--c-blue);
+  color: #B22222;
   background: transparent;
 }
 
-.pagination>.active>a {     
+
+.pagination>.active>a {
   background: #fff;
-  color: var(--c-blue);
+  color: #B22222;
   border-radius: 15px !important;
 }
 
@@ -239,4 +245,24 @@
   padding: 10px 20px;
   width: 100%;
   min-width: 200px;
+}
+
+
+.p-show {}
+
+
+.p-show__more {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.p-show__more-btn {
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #dcdcdc;
+  color: #2F4F4F;
 }

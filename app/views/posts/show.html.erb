@@ -1,2 +1,8 @@
+<div class="p-show">
 <%= @post.user_name %>
 <%= simple_format(@post.body) %>
+
+  <div class="p-show__more">
+    <%= link_to "一覧へ戻る", posts_path, class:"p-show__more-btn" %>
+  </div>
+</div>
