@@ -5,7 +5,7 @@ module ApplicationHelper
       title: 'びびらせ王選手権',
       reverse: true,
       separator: '|',
-      description: 'このアプリは、投稿された内容のびびったポイントを競います。',
+      description: '文章だけで、どれだけ人を怖がらせることができるのか。びびった！ボタンを押した回数で競う文章投稿アプリです。',
       keywords: '',
       canonical: request.original_url,
       noindex: ! Rails.env.production?,
@@ -15,7 +15,7 @@ module ApplicationHelper
       og: {
         site_name: 'びびらせ王選手権',
         title: 'びびらせ王選手権',
-        description: 'このアプリは、投稿された内容のびびったポイントを競います。', 
+        description: '文章だけで、どれだけ人を怖がらせることができるのか。びびった！ボタンを押した回数で競う文章投稿アプリです。', 
         type: 'website',
         url: request.original_url,
         image: image_url('ogp.png'),
