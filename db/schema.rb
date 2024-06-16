@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_16_022923) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_16_070338) do
   create_table "posts", force: :cascade do |t|
     t.text "body"
     t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "points"
+    t.integer "points", default: 0
   end
 
 end
