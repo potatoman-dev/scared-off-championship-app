@@ -297,8 +297,14 @@ a:hover {
 .p-show__body {
   color: #cfcfcf;
   padding: 30px 10px 30px;
-
+  letter-spacing: 0.05em;
+  line-height: 1.75;
+  font-size: 15px;
   word-break: break-all;
+}
+
+.p-show__body p {
+  margin-bottom: 15px;
 }
 
 .p-show__btn {
