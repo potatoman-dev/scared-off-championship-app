@@ -83,12 +83,11 @@ a:hover {
 
 .p-home__title,
 .p-posts__title {
-  font-size: 45px;
+  font-size: 34px;
   text-align: center;
-  letter-spacing: 0.05em;
   color: #b22222;
   font-family: var(--f-ja);
-  margin: 0 0 20px;
+  margin: 0 0 30px;
 }
 
 .p-home__info {
@@ -350,7 +349,7 @@ a:hover {
     align-items: center;
     border-radius: 50%;
     font-family: var(--f-ja);
-    font-size: 18px;
+    font-size: 17px;
     color: #B22222;
     font-weight: bold;
     border: none;
@@ -366,7 +365,7 @@ a:hover {
   }
 
   p {
-    margin-top: 10px;
+    margin-top: 20px;
     color: #596868;
   }
 }
