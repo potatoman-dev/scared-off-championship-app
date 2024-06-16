@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+        post:
+          user_name: ユーザー名
+          body: 投稿
