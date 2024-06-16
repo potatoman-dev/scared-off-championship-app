@@ -70,6 +70,8 @@ a:hover {
 .p-posts,
 .p-show {
   padding: 0 20px 30px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .p-home__title,
@@ -87,6 +89,7 @@ a:hover {
   color: #596868;
   font-size: 13px;
   line-height: 1.5;
+  text-align: center;
 }
 
 .p-home .c-posts__item {
@@ -170,6 +173,7 @@ a:hover {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  word-break: break-all;
 }
 
 /*ページネーション自体のデザイン*/
@@ -269,10 +273,9 @@ a:hover {
   margin: 20px auto 0;
   padding: 5px 20px;
   border-radius: 5px;
-  background: #8d2828;
-  color: #fff;
+  color: #B22222;
   font-family: var(--f-ja);
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   width: fit-content;
   display: flex;
@@ -280,7 +283,7 @@ a:hover {
   justify-content: center;
 
   span {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
   }
 }
@@ -293,6 +296,8 @@ a:hover {
 .p-show__body {
   color: #cfcfcf;
   padding: 30px 10px 30px;
+
+  word-break: break-all;
 }
 
 .p-show__btn {
@@ -309,11 +314,12 @@ a:hover {
     border-radius: 50%;
     font-family: var(--f-ja);
     font-size: 18px;
-    color: #fff;
+    color: #B22222;
+    font-weight: bold;
     border: none;
     outline: none;
     box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.05);
-    background: #8b0000;
+    background: #fff;
   }
 }
 
