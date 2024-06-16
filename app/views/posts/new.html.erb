@@ -1,5 +1,6 @@
 <div class="p-new">
   <h1 class="p-new__title">投稿</h1>
+  <p class="p-home__info">ニックネームと投稿内容の入力は必須です。<br>投稿は削除できません。<br>問題が発生した場合は下部お問い合わせよりご連絡ください。</p>
   <%= form_with model: @post do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
     <div class="p-new__item">

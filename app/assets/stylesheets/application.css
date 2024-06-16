@@ -66,6 +66,11 @@ a:hover {
   background: #8b0000;
 }
 
+.l-header__post-btn:focus,
+.l-header__post-btn:hover {
+  color: white;
+}
+
 .p-home,
 .p-posts,
 .p-new,
