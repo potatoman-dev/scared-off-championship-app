@@ -28,6 +28,7 @@ gem "jbuilder"
 
 gem 'kaminari'
 gem 'rails-i18n'
+gem 'meta-tags'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
