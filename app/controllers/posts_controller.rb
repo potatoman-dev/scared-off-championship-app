@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.page(params[:page]).per(6)
+    @posts = Post.all.page(params[:page]).order(created_at: :desc).per(6)
   end
 
   def show
@@ -19,6 +19,15 @@ class PostsController < ApplicationController
     else
       flash.now[:danger] = "投稿に失敗しました"
       render :new, status: :unprocessable_entity
+    end
+  end
+
+  def points
+    @post = Post.find(params[:id])
+    @post.increment!(:points)
+    respond_to do |format|
+      format.html { redirect_to @post }
+      format.js   # points.js.erb を使用するために必要
     end
   end
 

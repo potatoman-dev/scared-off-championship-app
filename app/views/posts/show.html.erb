@@ -1,6 +1,22 @@
 <div class="p-show">
-<%= @post.user_name %>
-<%= simple_format(@post.body) %>
+<div class="p-show__head">
+  <p class="p-show__name">
+    作者：<%= @post.user_name %>
+  </p>
+  <p class="p-show__date">
+    作成日：<%= @post.created_at.strftime('%Y/%m/%d')  %>
+  </p>
+</div>
+  <p class="p-show__points">びびったポイント総数<br><span id="points_count"><%= @post.points ? @post.points : '0' %></span></p>
+  <hr>
+  <div class="p-show__body">
+    <%= simple_format(@post.body) %>
+  </div>
+  <hr>
+
+  <div class="p-show__btn">
+<%= button_to 'びびった！', points_post_path(@post), method: :post, remote: true %>
+</div>
 
   <div class="p-show__more">
     <%= link_to "一覧へ戻る", posts_path, class:"p-show__more-btn" %>
