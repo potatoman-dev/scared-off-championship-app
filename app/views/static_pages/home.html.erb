@@ -1,0 +1,21 @@
+<div class="p-home">
+  <h1 class="p-home__title">Scared-off<br>Championship</h1>
+  <p class="p-home__info">このアプリは、投稿された内容のびびったポイントを競います。投稿は削除できません。</p>
+  <ul class="c-posts__list">
+    <% @topFivePosts.each do |post| %>
+    <li class="c-posts__item">
+      <%= link_to post_path(post.id) do %>
+        <p class="c-posts__item-body">
+          <%= post.body %>
+        </p>
+        <p class="c-posts__item-name">
+          <%= post.user_name %>
+        </p>
+        <% end %>
+    </li>
+  <% end %>
+  </ul>
+  <div class="p-home__more">
+  <%= link_to "すべて見る", posts_path, class:"p-home__more-btn" %>
+  </div>
+</div>

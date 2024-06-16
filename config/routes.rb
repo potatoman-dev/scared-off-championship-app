@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'posts#index'
+  root 'static_pages#home'
+  get 'static_pages/home'
   resources :posts, only:[:index, :show, :new, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

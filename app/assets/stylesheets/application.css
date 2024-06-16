@@ -21,10 +21,18 @@
   --c-blue: #3282B8;
   --c-red: #951717;
   --f-noto: "Noto Serif JP", serif;
+  --f-en: "Creepster", system-ui;
  }
 
+ /* ディープブラック #000000, ブラッドレッド #B22222, ダークレッド #8B0000, ダークグレー #2F4F4F, オリーブドラブ #556B2F, ブラッドオレンジ #FF4500 */
+
  body {
-  background: var(--c-blue-light);
+  background: #010101;
+  padding-top: 80px;
+ }
+
+ a:focus, a:hover {
+  text-decoration: none;
  }
 
  .l-header {
@@ -32,44 +40,102 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-.l-header__top {
-  margin-bottom: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--c-blue-dark);
+.l-header__back-to-top {
+  font-size: 14px;
+  color: #B22222;
+  text-align: center;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  font-family: var(--f-en);
 }
 
 .l-header__post-btn {
   font-size: 16px;
   padding: 6px 15px;
   border-radius: 5px;
-  background-color: var(--c-blue);
+  background: #8B0000;
   color: white;
   box-shadow: 3px 5px 0 rgba(0, 0, 0, .02);
 }
 
-.p-posts {
-  padding: 0 20px;
+.p-home,.p-posts {
+  padding: 0 20px 30px;
 }
 
-.p-posts__title {
-  font-size: 30px;
+.p-home__title,.p-posts__title {
+  font-size: 45px;
   text-align: center;
   letter-spacing: 0.05em;
-  color: var(--c-blue-dark);
-  font-family: var(--f-noto);
+  color: #B22222;
+  font-family: var(--f-en);
+  margin: 0 0 20px;
 }
 
-.p-posts__info {
-  margin: 20px 10px 30px;
-  color: #777777;
+.p-home__info {
+  margin: 0 10px 30px;
+  color: #596868;
   font-size: 13px;
   line-height: 1.5;
 }
 
-.p-posts__list {
+.p-home .c-posts__item {
+  position: relative;
+}
+
+.p-home .c-posts__item::before {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.p-home .c-posts__item:nth-of-type(1)::before {
+  content: "1";
+  background: #c39d37;
+}
+
+.p-home .c-posts__item:nth-of-type(2)::before {
+  content: "2";
+  background: #b9b9b9;
+}
+
+.p-home .c-posts__item:nth-of-type(3)::before {
+  content: "3";
+  background: #cd845e;
+}
+
+.p-home__more {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.p-home__more-btn {
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #dcdcdc;
+  color: #2F4F4F;
+}
+
+.c-posts__list {
   list-style: none;
   padding-left: 0;
   display: flex;
@@ -77,23 +143,24 @@
   gap: 20px;
 }
 
-.p-posts__item a {
+.c-posts__item a {
   padding: 20px 24px;
   border-radius: 8px;
-  background: white;
+  background: #3d5151;
+  color: #fff;
   display: block;
-  color: var(--c-black);
   font-family: var(--f-noto);
+  box-shadow: 3px 5px 5px 0 rgba(255, 255, 255, .04);
 }
 
-.p-posts__item-name {
+.c-posts__item-name {
   font-size: 12px;
   margin-bottom: 0;
   text-align: right;
-  color: #777777;
+  color: #cacaca;
 }
 
-.p-posts__item-body {
+.c-posts__item-body {
   font-size: 14px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -120,4 +187,56 @@
 
 .pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
   background: transparent;
+}
+
+.p-new {
+  padding: 0 30px;
+}
+
+.p-new__item {
+  margin-bottom: 30px;
+}
+
+.p-new__title {
+  margin: 0 0 30px;
+  font-family: var(--f-en);
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #B22222;
+}
+
+.p-new__item-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #B22222;
+}
+
+.p-new__item-input {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #eeeeee;
+  outline: none;
+}
+
+.p-new__submit-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.p-new__submit-btn-input {
+  background: #8B0000;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 100%;
+  min-width: 200px;
 }

@@ -1,4 +1,5 @@
 <div class="p-new">
+  <h1 class="p-new__title">Post</h1>
   <%= form_with model: @post do |f| %>
     <div class="p-new__item">
       <%= f.label :user_name, "ニックネーム", class: "p-new__item-label" %>
@@ -6,8 +7,10 @@
     </div>
     <div class="p-new__item">
       <%= f.label :body, "投稿内容", class: "p-new__item-label" %>
-      <%= f.text_area :body, class: "p-new__item-input" %>
+      <%= f.text_area :body, size: "x5", class: "p-new__item-input" %>
     </div>
-    <%= f.submit class: "p-new__submit-btn" %>
+    <div class="p-new__submit-btn">
+    <%= f.submit "投稿する", class: "p-new__submit-btn-input" %>
+    </div>
   <% end %>
 </div>
